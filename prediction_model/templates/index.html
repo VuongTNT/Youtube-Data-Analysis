@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Trend Prediction</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <h1 class="text-center mb-4">🎥 Video Trend Prediction</h1>
+                <form action="/" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">View Count</label>
+                        <input type="number" class="form-control" name="viewCount" placeholder="Enter total views" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Like Count</label>
+                        <input type="number" class="form-control" name="likeCount" placeholder="Enter total likes" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Comment Count</label>
+                        <input type="number" class="form-control" name="commentCount" placeholder="Enter total comments" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Average Daily Views</label>
+                        <input type="number" class="form-control" name="avgDailyViews" placeholder="Enter avg daily views" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Engagement Rate</label>
+                        <input type="text" class="form-control" name="engagementRate" placeholder="e.g., 0.05" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Topic Categories</label>
+                        <input type="text" class="form-control" name="topicCategories" placeholder="Comma-separated (e.g., Music,Pop music)" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Duration (ISO 8601 Format)</label>
+                        <input type="text" class="form-control" name="duration" placeholder="e.g., PT2M52S" required>
+                    </div>
+
+                    <!-- Category Dropdown -->
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select class="form-control" name="category" required>
+                            <option value="Music">Music</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Gaming">Gaming</option>
+                            <option value="People & Blogs">People & Blogs</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Science & Technology">Science & Technology</option>
+                            <option value="News & Politics">News & Politics</option>
+                            <option value="Autos & Vehicles">Autos & Vehicles</option>
+                            <option value="Film & Animation">Film & Animation</option>
+                            <option value="Education">Education</option>
+                            <option value="Howto & Style">Howto & Style</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Travel & Events">Travel & Events</option>
+                            <option value="Pets & Animals">Pets & Animals</option>
+                        </select>
+                    </div>
+
+                    <!-- File Upload Section -->
+                    <div class="mb-3">
+                        <label class="form-label">Upload Model (.pkl)</label>
+                        <input type="file" class="form-control" name="model" accept=".pkl" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Upload Preprocessor (.pkl)</label>
+                        <input type="file" class="form-control" name="preprocessor" accept=".pkl" required>
+                    </div>
+
+                    <!-- Updated Full-Width Predict Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">🚀 Predict</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
